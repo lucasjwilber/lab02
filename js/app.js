@@ -12,7 +12,6 @@ if (firstQuestion === "yes" || firstQuestion === "y") {
 } else {
     console.log("question answered incorrectly");
     var secondQuestion = prompt(`Too bad, you've already started. And now you're 0 for 1. Only four questions left. \n Question 2: Would the following code give an error? \n alert('I'm eating an apple');`).toLowerCase();
-    result = "incorrect";
 }
 console.log(`second question answered with "${secondQuestion}"`);
 //second question:
@@ -29,12 +28,10 @@ console.log(`third question answered with "${thirdQuestion}"`);
 if (thirdQuestion === "yes" || thirdQuestion === "y") {
     console.log("question answered incorrectly");
     var fourthQuestion = prompt(`False! \n Fourth question: Are there three different characters you can use to encapsulate strings?`).toLowerCase();
-    result = "incorrect";
 } else {
     console.log("question answered correctly");
     var fourthQuestion = prompt(`That's right! \n Fourth question: Are there three different characters you can use to encapsulate strings?`).toLowerCase();
     quizScore++;
-    result = "correct";
 }
 console.log(`fourth question answered with "${fourthQuestion}"`);
 //fourth question
@@ -42,22 +39,19 @@ if (fourthQuestion === "yes" || fourthQuestion === "y") {
     console.log("question answered correctly");
     var fifthQuestion = prompt(`Correct! \n Last question: Is Au the chemical symbol for Australium?`).toLowerCase();
     quizScore++;
-    result = "correct";
 } else {
     console.log("question answered incorrectly");
     var fifthQuestion = prompt(`Incorrect! The ', ", and \` characters all work with strings. \n Last question: Is Au the chemical symbol for Australium?`).toLowerCase();
-    result = "incorrect";
 }
 console.log(`fifth question answered with "${fifthQuestion}"`);
 //fifth question
 if (fifthQuestion === "yes" || fifthQuestion === "y") {
     console.log("question answered correctly");
     alert(`Nope! Test complete, you scored ${quizScore} out of 5`);
-    result = "incorrect";
 } else {
     console.log("question answered correctly");
     quizScore++;
-    result = "correct";
     alert(`Good job. You scored ${quizScore} out of 5`);
 }
 console.log(`total score for ${visitorName}: ${quizScore}`);
+console.log(`"LiVe ReLoAd EnAbLeD."`);
