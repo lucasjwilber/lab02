@@ -1,0 +1,31 @@
+header {
+    text-align: center;
+    background-color: rgb(255, 221, 170);
+    color: rgb(85, 51, 0);
+
+}
+body {
+    background-color: rgb(170, 125, 57);
+    font-family: verdana;
+}
+
+ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-family: monospace;
+    font-size: 35px;
+}
+h3 {
+    background-color: rgb(128, 85, 21);
+    color: rgb(255, 221, 170);
+    font-size: 25px;
+}
+h4 {
+    background-color: rgb(212, 170, 106);
+    font-size: 20px;
+}

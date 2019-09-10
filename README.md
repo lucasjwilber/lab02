@@ -7,7 +7,7 @@ An “About Me” webpage that quizzes the user on fun facts and gives the user 
 Author: Lucas Wilber
 
 Links and Resources:
--tbc
+Used paletton.com for CSS color palette and css-tricks.com for general CSS help
 
 Reflections and Comments:
--tbc
+Could improve the quiz script using more variables and a loop.

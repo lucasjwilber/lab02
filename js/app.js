@@ -27,10 +27,10 @@ console.log(`third question answered with "${thirdQuestion}"`);
 //third question
 if (thirdQuestion === "yes" || thirdQuestion === "y") {
     console.log("question answered incorrectly");
-    var fourthQuestion = prompt(`False! \n Fourth question: Are there three different characters you can use to encapsulate strings?`).toLowerCase();
+    var fourthQuestion = prompt(`False! \n Fourth question: Are there 3 different characters you can use to encapsulate strings?`).toLowerCase();
 } else {
     console.log("question answered correctly");
-    var fourthQuestion = prompt(`That's right! \n Fourth question: Are there three different characters you can use to encapsulate strings?`).toLowerCase();
+    var fourthQuestion = prompt(`That's right! \n Fourth question: Are there 3 different characters you can use to encapsulate strings?`).toLowerCase();
     quizScore++;
 }
 console.log(`fourth question answered with "${fourthQuestion}"`);
