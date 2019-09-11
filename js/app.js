@@ -45,7 +45,7 @@ for (var i = 0; i < 5; i++) {
     if (typeof (guessingGame[3][i] === 'string')) {
         guessingGame[3][i] = guessingGame[3][i].toLowerCase();
     }
-    
+
     //check for correct answer
     if ((guessingGame[3][i] === guessingGame[1][i])
         || (guessingGame[3][i] === guessingGame[2][i])
@@ -59,16 +59,50 @@ for (var i = 0; i < 5; i++) {
 }
 
 //question 6
-var randomNumber = Math.round(Math.random() * 10);
-var numberGuess = 0; //placeholder value
-var attempts = 0;
-do {
-    numberGuess = prompt(`Guess a number between 1 and 10. You have 4 tries to get it right!`);
-    attempts++;
-    console.log(`User guessed ${numberGuess}. Correct answer is ${randomNumber}. Attempt ${attempts}/4`);
-} while (numberGuess != randomNumber && attempts < 4);
-if (numberGuess == randomNumber) {
-    alert(`Nice! You got it.`);
-} else {
-    alert(`Nice try, but the answer was ${randomNumber}`);
+var randomNumber = Math.ceil(Math.random() * 10);
+console.log(`number is ${randomNumber}`);
+var attempts = 3;
+var numberGuess = prompt(`Guess a number between 1 and 10. You have ${attempts} tries left!`);
+while ((numberGuess != randomNumber) && (attempts > 0)) {
+    if (numberGuess > randomNumber) {
+        numberGuess = prompt(`Too high! You have ${attempts} tries left!`);
+        attempts--;
+        console.log(`user guessed ${numberGuess}, but the number is ${randomNumber}`);
+    } else {
+        numberGuess = prompt(`Too low! You have ${attempts} tries left!`);
+        attempts--;
+        console.log(`user guessed ${numberGuess}, but the number is ${randomNumber}`);
+    }
 }
+if (numberGuess == randomNumber) {
+    alert(`Correct! The number was ${randomNumber}`);
+    quizScore++;
+} else {
+    alert(`Out of tries! The number was ${randomNumber}`);
+}
+
+//question 7
+var correctAnswers = ['moira', 'ana', 'mercy', 'baptiste', 'zenyatta', 'lucio', 'brigitte',];
+console.log(answerGuess);
+var guesses = 5;
+var gotItRight = false;
+do {
+    var answerGuess = prompt(`Name a Support character in the game Overwatch. You have ${guesses} tries!`);
+    answerGuess = answerGuess.toLowerCase();
+    guesses--;
+    for (var i = 0; i < correctAnswers.length; i++) {
+        if (answerGuess === correctAnswers[i]) {
+            gotItRight = true;
+            console.log(`you guessed ${answerGuess}, you have ${guesses} guesses left`);
+        }
+    }
+} while ((gotItRight == false) && (guesses > 0));
+
+if (gotItRight === true) {
+    alert(`Well done ${visitorName}! That's correct!`);
+    quizScore++;
+} else {
+    alert(`Sorry ${visitorName}, you're out of tries.`);
+}
+
+alert(`Thanks for taking my quiz! Your final score is ${quizScore}/7.`);
