@@ -1,8 +1,8 @@
 'use strict'
 var visitorName = prompt("Welcome to my site! Who is this?");
 document.getElementById("welcomeVisitorMessage").textContent = `Greetings, ${visitorName}!`;
-//start quiz. first question:
 var quizScore = 0;
+//start quiz. first question:
 var firstQuestion = prompt(`Welcome to my site ${visitorName}. Ready for a short quiz?`).toLowerCase();
 console.log(`first question answered with "${firstQuestion}"`);
 if (firstQuestion === "yes" || firstQuestion === "y") {
@@ -47,13 +47,13 @@ console.log(`fifth question answered with "${fifthQuestion}"`);
 //fifth question
 if (fifthQuestion === "yes" || fifthQuestion === "y") {
     console.log("question answered correctly");
-    alert(`Nope! Test complete, you scored ${quizScore} out of 5`);
+    alert(`Nope! \n Test complete, you scored ${quizScore} out of 5`);
 } else {
     console.log("question answered correctly");
     quizScore++;
-    alert(`Good job. You scored ${quizScore} out of 5`);
+    alert(`Good job. \n You scored ${quizScore} out of 5`);
 }
 console.log(`total score for ${visitorName}: ${quizScore}`);
 console.log(`"LiVe ReLoAd EnAbLeD."`);
-//footer
+//footer text
 document.getElementById("footer").textContent = `Thanks for visiting, ${visitorName}.`;

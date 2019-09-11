@@ -2,7 +2,7 @@ header {
     text-align: center;
     color: white;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtvyjgQYtx0dfzrzEKsC64edZ80u9yeXI3PdytZSoU_2U5_un2);
-    background-size: 100px;
+    background-size: 300px;
 }
 body {
     background-color: rgb(170, 125, 57);
@@ -32,7 +32,7 @@ h4 {
     height: 100px;
     float: right;
     margin-right: 450px;
-    margin-top: -122px;
+    margin-top: -140px;
 }
 #footer {
     text-align: center;
