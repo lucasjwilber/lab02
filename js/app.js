@@ -32,7 +32,7 @@ var guessingGame = [
     ],
 ];
 
-var visitorName = prompt("Welcome to my site! Who is this?");
+var visitorName = prompt(`Welcome to my site! Who is this?`);
 alert(`Welcome to my site ${visitorName}. Let's play a guessing game.`);
 
 //questions loop
@@ -62,7 +62,7 @@ for (var i = 0; i < 5; i++) {
 var randomNumber = Math.ceil(Math.random() * 10);
 console.log(`number is ${randomNumber}`);
 var attempts = 3;
-var numberGuess = prompt(`Guess a number between 1 and 10. You have ${attempts} tries left!`);
+var numberGuess = prompt(`Guess a number between 1 and 10. You have 4 tries left!`);
 while ((numberGuess != randomNumber) && (attempts > 0)) {
     if (numberGuess > randomNumber) {
         numberGuess = prompt(`Too high! You have ${attempts} tries left!`);
@@ -84,10 +84,10 @@ if (numberGuess == randomNumber) {
 //question 7
 var correctAnswers = ['moira', 'ana', 'mercy', 'baptiste', 'zenyatta', 'lucio', 'brigitte',];
 console.log(answerGuess);
-var guesses = 5;
+var guesses = 6;
 var gotItRight = false;
 do {
-    var answerGuess = prompt(`Name a Support character in the game Overwatch. You have ${guesses} tries!`);
+    var answerGuess = prompt(`Name a Support character in the game Overwatch. You have ${guesses} tries left!`);
     answerGuess = answerGuess.toLowerCase();
     guesses--;
     for (var i = 0; i < correctAnswers.length; i++) {
@@ -102,7 +102,8 @@ if (gotItRight === true) {
     alert(`Well done ${visitorName}! That's correct!`);
     quizScore++;
 } else {
-    alert(`Sorry ${visitorName}, you're out of tries.`);
+    alert(`Sorry ${visitorName}, you're out of tries. \n The possible answers were ${correctAnswers[0]}, ${correctAnswers[1]},
+    ${correctAnswers[2]}, ${correctAnswers[3]}, ${correctAnswers[4]}, ${correctAnswers[5]}, or ${correctAnswers[6]}.`);
 }
 
 alert(`Thanks for taking my quiz! Your final score is ${quizScore}/7.`);
