@@ -1,7 +1,5 @@
 'use strict'
-//0 = questions
-//1 = answers
-//2 = responses
+
 var randomNumber = Math.round(Math.random() * 10);
 var quizScore = 0;
 var guessingGame = [
@@ -45,14 +43,37 @@ var visitorName = prompt("Welcome to my site! Who is this?");
 alert(`Welcome to my site ${visitorName}. Let's play a guessing game.`);
 
 //questions loop
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < guessingGame[0].length; i++) {
+
+    //change index 3 placeholders to user's entries
     guessingGame[3][i] = prompt(guessingGame[0][i]);
-    guessingGame[3][i] = guessingGame[3][i].toLowerCase();
-    console.log(guessingGame[3][i]);
-    if (guessingGame[3][i] === guessingGame[1][i]
-        || guessingGame[3][i] === guessingGame[2][i]) {
+
+    //if user entered a string, lowercase it for simpler comparisons later
+    if (typeof (guessingGame[3][i] === 'string')) {
+        guessingGame[3][i] = guessingGame[3][i].toLowerCase();
+    }
+    if ((guessingGame[3][i] === guessingGame[1][i])
+        || (guessingGame[3][i] === guessingGame[2][i])
+        && (i !== 5)) {
+        alert(`Correct!`);
+        quizScore++;
+
+        //question 6, guess a number
+    } else if (i === 5) {
+        var attempts = 0;
+        while ((guessingGame[3][5] !== guessingGame[1][5])
+            && (attempts <= 4)) {
+            guessingGame[3][5] = prompt(guessingGame[0][5]);
+            attempts++;
+        }
+        if (attempts === 4) {
+            alert(`Incorrect :(`);
+        } else {
             alert(`Correct!`);
             quizScore++;
+        }
+
+        //question 7;
     } else {
         alert(`Incorrect :(`);
     }
