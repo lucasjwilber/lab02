@@ -1,14 +1,13 @@
 header {
     text-align: center;
-    background-color: rgb(255, 221, 170);
-    color: rgb(85, 51, 0);
-
+    color: white;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtvyjgQYtx0dfzrzEKsC64edZ80u9yeXI3PdytZSoU_2U5_un2);
+    background-size: 100px;
 }
 body {
     background-color: rgb(170, 125, 57);
     font-family: verdana;
 }
-
 ul li {
     list-style-type: disc;
     list-style-position: inside;
@@ -28,4 +27,19 @@ h3 {
 h4 {
     background-color: rgb(212, 170, 106);
     font-size: 20px;
+}
+#html5logo {
+    height: 100px;
+    float: right;
+    margin-right: 450px;
+    margin-top: -122px;
+}
+#footer {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(255, 221, 170);
+    background-color:  rgb(128, 85, 21);
 }

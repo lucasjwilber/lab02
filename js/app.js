@@ -55,3 +55,5 @@ if (fifthQuestion === "yes" || fifthQuestion === "y") {
 }
 console.log(`total score for ${visitorName}: ${quizScore}`);
 console.log(`"LiVe ReLoAd EnAbLeD."`);
+//footer
+document.getElementById("footer").textContent = `Thanks for visiting, ${visitorName}.`;
