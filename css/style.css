@@ -1,38 +1,38 @@
+
 header {
     text-align: center;
     color: white;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtvyjgQYtx0dfzrzEKsC64edZ80u9yeXI3PdytZSoU_2U5_un2);
     background-size: 300px;
 }
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 30px;
+}
 body {
     background-color: rgb(170, 125, 57);
     font-family: verdana;
+    padding: 20px;
+    margin: 100px;
 }
 ul li {
     list-style-type: disc;
     list-style-position: inside;
 }
-h1 {
-    font-size: 60px;
-}
-h2 {
-    font-family: monospace;
-    font-size: 35px;
-}
-h3 {
-    background-color: rgb(128, 85, 21);
-    color: rgb(255, 221, 170);
-    font-size: 25px;
-}
-h4 {
+.headline {
+    
     background-color: rgb(212, 170, 106);
-    font-size: 20px;
 }
 #html5logo {
-    height: 100px;
-    float: right;
-    margin-right: 450px;
-    margin-top: -140px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
 }
 #footer {
     text-align: center;
@@ -42,4 +42,23 @@ h4 {
     width: 100%;
     color: rgb(255, 221, 170);
     background-color:  rgb(128, 85, 21);
+}
+ol {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+#top10ol {
+    background-color: rgb(212, 170, 106);
+}
+li {
+    background-color: rgb(128, 85, 21);
+}
+#leftArticle {
+    width: 30%;
+}
+#top10box {
+    width: 30%;
+    margin-right: 0;
+    float: right;
+    margin-top: -400px;
 }
