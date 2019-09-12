@@ -126,3 +126,15 @@ else {
 }
 
 alert(`Thanks for taking my quiz! Your final score is ${quizScore}/7.`);
+
+
+function question1(answer) {
+  if (answer === 'n' || answer === 'no') {
+    alert('correct');
+    else {
+      alert('no');
+   }
+  }
+}
+
+question1()
