@@ -4,6 +4,8 @@ LAB - 02/03
 
 An “About Me” webpage that quizzes the user and gives the user some basic information about me. Uses CSS/JavaScript/HTML.
 
+This code worked on by Jerome, driver, and Lucas, navigator, via paired programming.
+
 Author: Lucas Wilber
 
 Links and Resources:
