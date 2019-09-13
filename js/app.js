@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 var guessingGame = [
   //index 0 = questions
   ['Yes or no: I was a chef before joining Code Fellows.',
@@ -34,21 +32,26 @@ var guessingGame = [
 ];
 
 
+
 var quizScore = 0;
 var visitorName = prompt('Welcome to my site! Who is this?');
 var wantsQuiz = confirm(`Welcome to my site ${visitorName}. Want to play a guessing game?`);
 
-function askQuestion(number) {
-  //ask a question and change the corresponding 'placeholder' answer to whatever the user entered
-  guessingGame[3][number] = prompt(guessingGame[0][number]).toLowerCase();
+
+/////////////////////////////////declare all functions////////////////////////////
+
+
+//question 1
+function question1() {
+  guessingGame[3][0] = prompt(guessingGame[0][0]).toLowerCase();
 
   //if user's answer matches either of the predefined answers
   if (
-    (guessingGame[3][number] === guessingGame[1][number])
-    || (guessingGame[3][number] === guessingGame[2][number])) {
+    (guessingGame[3][0] === guessingGame[1][0])
+    || (guessingGame[3][0] === guessingGame[2][0])) {
     alert('Correct!');
     quizScore++;
-    console.log(`Question; ${guessingGame[0][number]}. Correct answer: ${guessingGame[2][number]} or ${guessingGame[1][number]}. User answered with ${guessingGame[3][number]}`);
+    console.log(`Question; ${guessingGame[0][0]}. Correct answer: ${guessingGame[2][0]} or ${guessingGame[1][0]}. User answered with ${guessingGame[3][0]}`);
   }
   else {
     alert('Incorrect :(');
@@ -56,14 +59,80 @@ function askQuestion(number) {
 }
 
 
-if (wantsQuiz) {
+//question 2
+function question2() {
+  guessingGame[3][1] = prompt(guessingGame[0][1]).toLowerCase();
 
-  //this loop asks the first 5 questions
-  for (var i = 0; i < guessingGame.length; i++) {
-    askQuestion(i);
+  //if user's answer matches either of the predefined answers
+  if (
+    (guessingGame[3][1] === guessingGame[1][1])
+    || (guessingGame[3][1] === guessingGame[2][1])) {
+    alert('Correct!');
+    quizScore++;
+    console.log(`Question; ${guessingGame[0][1]}. Correct answer: ${guessingGame[2][1]} or ${guessingGame[1][1]}. User answered with ${guessingGame[3][1]}`);
   }
+  else {
+    alert('Incorrect :(');
+  }
+}
 
-  //question 6
+
+//question 3
+function question3() {
+  guessingGame[3][2] = prompt(guessingGame[0][2]).toLowerCase();
+
+  //if user's answer matches either of the predefined answers
+  if (
+    (guessingGame[3][2] === guessingGame[1][2])
+    || (guessingGame[3][2] === guessingGame[2][2])) {
+    alert('Correct!');
+    quizScore++;
+    console.log(`Question; ${guessingGame[0][2]}. Correct answer: ${guessingGame[2][2]} or ${guessingGame[1][2]}. User answered with ${guessingGame[3][2]}`);
+  }
+  else {
+    alert('Incorrect :(');
+  }
+}
+
+
+//question 4
+function question4() {
+  guessingGame[3][3] = prompt(guessingGame[0][3]).toLowerCase();
+
+  //if user's answer matches either of the predefined answers
+  if (
+    (guessingGame[3][3] === guessingGame[1][3])
+    || (guessingGame[3][3] === guessingGame[2][3])) {
+    alert('Correct!');
+    quizScore++;
+    console.log(`Question; ${guessingGame[0][3]}. Correct answer: ${guessingGame[2][3]} or ${guessingGame[1][3]}. User answered with ${guessingGame[3][3]}`);
+  }
+  else {
+    alert('Incorrect :(');
+  }
+}
+
+
+//question 5
+function question5() {
+  guessingGame[3][4] = prompt(guessingGame[0][4]).toLowerCase();
+
+  //if user's answer matches either of the predefined answers
+  if (
+    (guessingGame[3][4] === guessingGame[1][4])
+    || (guessingGame[3][4] === guessingGame[2][4])) {
+    alert('Correct!');
+    quizScore++;
+    console.log(`Question; ${guessingGame[0][4]}. Correct answer: ${guessingGame[2][4]} or ${guessingGame[1][4]}. User answered with ${guessingGame[3][4]}`);
+  }
+  else {
+    alert('Incorrect :(');
+  }
+}
+
+
+//question 6
+function question6() {
   var randomNumber = (Math.ceil(Math.random() * 10)).toString();
   console.log(`number is ${randomNumber}`);
   var attempts = 3;
@@ -87,8 +156,11 @@ if (wantsQuiz) {
   else {
     alert(`Out of tries! The number was ${randomNumber}`);
   }
+}
 
-  //question 7
+
+//question 7
+function question7() {
   var correctAnswers = ['moira', 'ana', 'mercy', 'baptiste', 'zenyatta', 'lucio', 'brigitte',];
   var guesses = 6;
   var gotItRight = false;
@@ -99,7 +171,7 @@ if (wantsQuiz) {
     console.log(answerGuess);
     guesses--;
     //compare the answer given to the array of correct answers
-    for (i = 0; i < correctAnswers.length; i++) {
+    for (var i = 0; i < correctAnswers.length; i++) {
       if (answerGuess === correctAnswers[i]) {
         gotItRight = true;
         console.log(`you guessed ${answerGuess}, you have ${guesses} guesses left`);
@@ -122,6 +194,18 @@ if (wantsQuiz) {
     }
     alert(`Sorry ${visitorName}, you're out of tries. \n The possible answers were ${answerString}`);
   }
-
-  alert(`Thanks for taking my quiz! Your final score is ${quizScore}/7.`);
 }
+
+if (wantsQuiz) {
+  question1();
+  question2();
+  question3();
+  question4();
+  question5();
+  question6();
+  question7();
+}
+
+/////////////////////////////////end of function decs////////////////////////////
+
+alert(`Thanks for taking my quiz! Your final score is ${quizScore}/7.`);
