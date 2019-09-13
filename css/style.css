@@ -1,27 +1,54 @@
 * {
     text-align: center;
 }
-header {
-    color: white;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtvyjgQYtx0dfzrzEKsC64edZ80u9yeXI3PdytZSoU_2U5_un2);
-    background-size: 300px;
-}
-h1 {
-    font-size: 60px;
-}
-h2 {
-    font-size: 40px;
-}
-h3 {
-    font-size: 30px;
-}
 body {
     background-color: rgb(170, 125, 57);
     font-family: verdana;
     padding: 20px;
     margin: 0 auto;
     width: 90%;
-    font-size: 16px;
+}
+header {
+    color: rgb(255, 219, 170);
+    background-color:  rgb(128, 85, 21);
+    background-size: 300px;
+}
+main {
+    margin: 1%;
+    width: 90%
+}
+#top10box, #aboutMe {
+    width: 45%;
+    float: right;
+    margin: 1%;
+    border: 6px solid rgb(212, 170, 106);
+}
+#top10ol {
+    background-color: rgb(212, 170, 106);
+}
+#top10ol li {
+    border-top: 2px solid  rgb(212, 170, 106);
+}
+#navBar {
+    
+}
+table {
+    display: inline;
+    height: 20px
+}
+td {
+    padding-left: 5em;
+    padding-right: 5em;
+    color: rgb(212, 168, 106);
+}
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 35px;
+}
+h3 {
+    font-size: 30px;
 }
 ul li {
     list-style-type: disc;
@@ -30,41 +57,23 @@ ul li {
 .headline {
     background-color: rgb(212, 170, 106);
 }
-#html5logo {
-    height: 200px;
-    position: fixed;
-}
-#footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: rgb(255, 221, 170);
-    background-color:  rgb(128, 85, 21);
-}
 ol {
-    list-style-type: disc;
     list-style-position: inside;
-}
-#top10ol {
-    background-color: rgb(212, 170, 106);
+    list-style-type: decimal;
 }
 li {
     background-color: rgb(128, 85, 21);
+    padding: 1%;
 }
-#aboutMe {
-    width: 30%;
-    float: left;
-    margin: 1%;
+#html5logo {
+    height: 200px;
+    position: fixed;
+    float: right;
 }
-#top10box {
-    width: 30%;
-    float: left;
-    margin: 1%;
-}
-#navBar {
-    margin-left: auto;
-    margin-right: auto;
-}
-td {
-    padding: 20px;
+footer {
+    position: absolute;
+    bottom: 0.5%;
+    width: 90%;
+    color: rgb(255, 221, 170);
+    background-color:  rgb(128, 85, 21);
 }
