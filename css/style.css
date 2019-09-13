@@ -29,12 +29,9 @@ main {
 #top10ol li {
     border-top: 2px solid  rgb(212, 170, 106);
 }
-#navBar {
-    
-}
 table {
     display: inline;
-    height: 20px
+    height: 20px;
 }
 td {
     padding-left: 5em;

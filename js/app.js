@@ -38,7 +38,7 @@ var visitorName = prompt('Welcome to my site! Who is this?');
 if (visitorName) {
   var wantsQuiz = confirm(`Welcome to my site ${visitorName}. Want to play a guessing game?`);
 }
-  
+
 
 /////////////////////////////////declare all functions////////////////////////////
 
