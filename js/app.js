@@ -35,8 +35,10 @@ var guessingGame = [
 
 var quizScore = 0;
 var visitorName = prompt('Welcome to my site! Who is this?');
-var wantsQuiz = confirm(`Welcome to my site ${visitorName}. Want to play a guessing game?`);
-
+if (visitorName) {
+  var wantsQuiz = confirm(`Welcome to my site ${visitorName}. Want to play a guessing game?`);
+}
+  
 
 /////////////////////////////////declare all functions////////////////////////////
 
@@ -204,8 +206,8 @@ if (wantsQuiz) {
   question5();
   question6();
   question7();
+  alert(`Thanks for taking my quiz! Your final score is ${quizScore}/7.`);
 }
 
 /////////////////////////////////end of function decs////////////////////////////
 
-alert(`Thanks for taking my quiz! Your final score is ${quizScore}/7.`);

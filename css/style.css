@@ -66,9 +66,8 @@ li {
     padding: 1%;
 }
 #html5logo {
-    height: 200px;
-    position: fixed;
-    float: right;
+    height: 150px;
+    position: absolute;
 }
 footer {
     position: absolute;
