@@ -161,12 +161,12 @@ function question6() {
 
 //question 7
 function question7() {
-  var correctAnswers = ['moira', 'ana', 'mercy', 'baptiste', 'zenyatta', 'lucio', 'brigitte',];
+  var correctAnswers = ['japan', 'uk', 'jordan', 'mexico', 'germany',];
   var guesses = 6;
   var gotItRight = false;
   //ask the question
   do {
-    var answerGuess = prompt(`Name a Support character in the game Overwatch. You have ${guesses} tries left!`);
+    var answerGuess = prompt(`Name a country that I've visited, other than America. You've got ${guesses} tries!`);
     answerGuess = answerGuess.toLowerCase();
     console.log(answerGuess);
     guesses--;
