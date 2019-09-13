@@ -1,6 +1,7 @@
-
-header {
+* {
     text-align: center;
+}
+header {
     color: white;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtvyjgQYtx0dfzrzEKsC64edZ80u9yeXI3PdytZSoU_2U5_un2);
     background-size: 300px;
@@ -18,26 +19,23 @@ body {
     background-color: rgb(170, 125, 57);
     font-family: verdana;
     padding: 20px;
-    margin: 100px;
+    margin: 0 auto;
+    width: 90%;
+    font-size: 16px;
 }
 ul li {
     list-style-type: disc;
     list-style-position: inside;
 }
 .headline {
-    
     background-color: rgb(212, 170, 106);
 }
 #html5logo {
     height: 200px;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
+    position: fixed;
 }
 #footer {
-    text-align: center;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     color: rgb(255, 221, 170);
@@ -53,12 +51,20 @@ ol {
 li {
     background-color: rgb(128, 85, 21);
 }
-#leftArticle {
+#aboutMe {
     width: 30%;
+    float: left;
+    margin: 1%;
 }
 #top10box {
     width: 30%;
-    margin-right: 0;
-    float: right;
-    margin-top: -400px;
+    float: left;
+    margin: 1%;
+}
+#navBar {
+    margin-left: auto;
+    margin-right: auto;
+}
+td {
+    padding: 20px;
 }

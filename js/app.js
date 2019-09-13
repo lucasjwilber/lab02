@@ -24,7 +24,7 @@ var guessingGame = [
     'no',
     'no',
   ],
-  //index 3 = user responses
+  //index 3 = user responses, will be reassigned by prompts
   ['placeholder',
     'placeholder',
     'placeholder',
@@ -58,15 +58,16 @@ function askQuestion(number) {
 
 if (wantsQuiz) {
 
+  //this loop asks the first 5 questions
   for (var i = 0; i < guessingGame.length; i++) {
     askQuestion(i);
   }
+
   //question 6
   var randomNumber = (Math.ceil(Math.random() * 10)).toString();
   console.log(`number is ${randomNumber}`);
   var attempts = 3;
   var numberGuess = prompt('Guess a number between 1 and 10. You have 4 tries left!');
-
   while ((numberGuess !== randomNumber) && (attempts > 0)) {
     if (numberGuess > randomNumber) {
       numberGuess = prompt(`Too high! You have ${attempts} tries left!`);
@@ -79,7 +80,6 @@ if (wantsQuiz) {
       console.log(`user guessed ${numberGuess}, but the number is ${randomNumber}`);
     }
   }
-
   if (numberGuess === randomNumber) {
     alert(`Correct! The number was ${randomNumber}`);
     quizScore++;
@@ -88,30 +88,29 @@ if (wantsQuiz) {
     alert(`Out of tries! The number was ${randomNumber}`);
   }
 
-
   //question 7
   var correctAnswers = ['moira', 'ana', 'mercy', 'baptiste', 'zenyatta', 'lucio', 'brigitte',];
   var guesses = 6;
   var gotItRight = false;
-
+  //ask the question
   do {
     var answerGuess = prompt(`Name a Support character in the game Overwatch. You have ${guesses} tries left!`);
     answerGuess = answerGuess.toLowerCase();
     console.log(answerGuess);
     guesses--;
-
+    //compare the answer given to the array of correct answers
     for (i = 0; i < correctAnswers.length; i++) {
       if (answerGuess === correctAnswers[i]) {
         gotItRight = true;
         console.log(`you guessed ${answerGuess}, you have ${guesses} guesses left`);
       }
     }
+    //repeat the while loop if the answer was incorrect and user still has guess attempts
   } while (
     (gotItRight === false) && (guesses > 0)
   );
 
-
-
+  //at this point the while loop above has ended becuase the user is either correct or out of tries, check which:
   if (gotItRight === true) {
     alert(`Well done ${visitorName}! That's correct!`);
     quizScore++;
