@@ -63,9 +63,13 @@ li {
     background-color: rgb(128, 85, 21);
     padding: 1%;
 }
-#html5logo {
+img {
     height: 100px;
+    width: 100px;
     float: right;
+    border-radius: 50px;
+    display: inline;
+    margin: 24px;
 }
 footer {
     position: fixed;
