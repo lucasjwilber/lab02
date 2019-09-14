@@ -40,7 +40,10 @@ if (visitorName) {
 }
 
 
-/////////////////////////////////declare all functions////////////////////////////
+//if visitor clicks OK when asked if they want to take my quiz
+if (wantsQuiz) {
+  runQuiz();
+}
 
 
 //question 1
@@ -118,7 +121,6 @@ function question4() {
 //question 5
 function question5() {
   guessingGame[3][4] = prompt(guessingGame[0][4]).toLowerCase();
-
   //if user's answer matches either of the predefined answers
   if (
     (guessingGame[3][4] === guessingGame[1][4])
@@ -135,10 +137,11 @@ function question5() {
 
 //question 6
 function question6() {
+  var attempts = 3;
   var randomNumber = (Math.ceil(Math.random() * 10)).toString();
   console.log(`number is ${randomNumber}`);
-  var attempts = 3;
   var numberGuess = prompt('Guess a number between 1 and 10. You have 4 tries left!');
+
   while ((numberGuess !== randomNumber) && (attempts > 0)) {
     if (numberGuess > randomNumber) {
       numberGuess = prompt(`Too high! You have ${attempts} tries left!`);
@@ -151,6 +154,7 @@ function question6() {
       console.log(`user guessed ${numberGuess}, but the number is ${randomNumber}`);
     }
   }
+
   if (numberGuess === randomNumber) {
     alert(`Correct! The number was ${randomNumber}`);
     quizScore++;
@@ -161,15 +165,15 @@ function question6() {
 }
 
 
-//question 7
+/////////////////////////////////question 7//////////////////////////////////
 function question7() {
   var correctAnswers = ['japan', 'uk', 'jordan', 'mexico', 'germany',];
   var guesses = 6;
   var gotItRight = false;
+  
   //ask the question
   do {
-    var answerGuess = prompt(`Name a country that I've visited, other than America. You've got ${guesses} tries!`);
-    answerGuess = answerGuess.toLowerCase();
+    var answerGuess = prompt(`Name a country that I've visited, other than America. You've got ${guesses} tries!`).toLowerCase();
     console.log(answerGuess);
     guesses--;
     //compare the answer given to the array of correct answers
@@ -198,7 +202,9 @@ function question7() {
   }
 }
 
-if (wantsQuiz) {
+
+function runQuiz() {
+  alert('Here we go!');
   question1();
   question2();
   question3();
@@ -208,6 +214,4 @@ if (wantsQuiz) {
   question7();
   alert(`Thanks for taking my quiz! Your final score is ${quizScore}/7.`);
 }
-
-/////////////////////////////////end of function decs////////////////////////////
 
