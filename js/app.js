@@ -82,6 +82,11 @@ function question2() {
 }
 
 
+
+
+
+
+
 //question 3
 function question3() {
   guessingGame[3][2] = prompt(guessingGame[0][2]).toLowerCase();
@@ -109,6 +114,12 @@ function question4() {
     (guessingGame[3][3] === guessingGame[1][3])
     || (guessingGame[3][3] === guessingGame[2][3])) {
     alert('Corrsadfsdfsdf!');
+
+
+
+
+
+
     console.log('asdf');
     quizScore++;
     console.log(`Question; ${guessingGame[0][3]}. Correct answer: ${guessingGame[2][3]} or ${guessingGame[1][3]}. User answered with ${guessingGame[3][3]}`);
